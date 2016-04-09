@@ -32,22 +32,22 @@ extension JKLAnimatedShapeView {
         animateToShape(animation, completionBlock: completionBlock)
     }
 
-    private func beginShape(rect: CGRect) -> CGPath {
+    private func beginShape(rect: CGRect!) -> CGPath {
 
         return UIBezierPath(rect: rect).CGPath
     }
 
-    private func endShape(rect: CGRect, draggedDownLength: CGFloat) -> CGPath {
+    private func endShape(rect: CGRect!, draggedDownLength: CGFloat!) -> CGPath {
 
         return trapeziumPath(rect, draggedDownLength: draggedDownLength)
     }
 
-    private func midShape(rect: CGRect, draggedDownLength: CGFloat) -> CGPath {
+    private func midShape(rect: CGRect!, draggedDownLength: CGFloat!) -> CGPath {
 
         return trapeziumPath(rect, draggedDownLength: draggedDownLength)
     }
 
-    private func trapeziumPath(rect: CGRect, draggedDownLength: CGFloat) -> CGPath {
+    private func trapeziumPath(rect: CGRect!, draggedDownLength: CGFloat!) -> CGPath {
 
         let path = CGPathCreateMutable()
 

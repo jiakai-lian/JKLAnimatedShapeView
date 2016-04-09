@@ -1,6 +1,7 @@
 # OS X
 .DS_Store
 
+
 # Xcode
 build/
 *.pbxuser
@@ -21,6 +22,8 @@ DerivedData
 
 Podfile.lock
 Example/Pods/
+.idea/
+Example/.idea/
 
 # Bundler
 .bundle

@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import JKLAnimatedShapeView
 
 class ViewController: UIViewController {
+    @IBOutlet weak var animatedShapeView: JKLAnimatedShapeView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,12 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        animatedShapeView.animateToTrapeziumShape(completionBlock: nil)
     }
 
 }

@@ -25,7 +25,9 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        animatedShapeView.animateToTrapeziumShape(completionBlock: nil)
+//        animatedShapeView.animateToTrapeziumShape(completionBlock: nil)
+        animatedShapeView.animateToShape(JKLShapeAnimationRectToTrapezium(),completionBlock:nil)
+
     }
 
 }
